@@ -26,9 +26,9 @@
 <h6>Sales Data Endpoints</h6>
 <li>GET /api/sales/ - List all sales data</li>
 <li>POST /api/sales/ - Create a new sales data</li>
-<li>GET /api/sales/<int:pk>/ - Retrieve a single sales data by primary key</li>
-<li>PUT /api/sales/<int:pk>/ - Update a single sales data by primary key</li>
-<li>DELETE /api/sales/<int:pk>/ - Delete a single sales data by primary key</li>
+<li> GET /api/sales/int:pk/ - Retrieve a single sales data by primary key</li>
+<li> PUT /api/sales/int:pk/ - Update a single sales data by primary key</li>
+<li> DELETE /api/sales/int:pk/ - Delete a single sales data by primary key</li>
 <h6>Report Endpoint</h6>
 <li>GET /api/generate_report/ - Generate a PDF report containing useful information about the sales data</li>
   
@@ -42,5 +42,8 @@
 <li>Most selling items sub-category names</li>
 <li>Region basis sales performance pie chart</li>
 <li>Sales performance line chart over the years</li>
+
+<h4> Result Pdf</h4>
+<a href="https://github.com/abdullahaltushar/techltd/blob/main/sales_report.pdf">Pdf here</a>
 
 <h3> Thank you 👍👍, View my code </h3>
