@@ -43,4 +43,4 @@
 <li>Region basis sales performance pie chart</li>
 <li>Sales performance line chart over the years</li>
 
-<h3> Thank you 👍👍, View filw code </h3>
+<h3> Thank you 👍👍, View my code </h3>
