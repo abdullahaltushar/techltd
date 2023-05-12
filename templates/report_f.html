@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Report</title>
+</head>
+<body>
+    <h1>Sales Report</h1>
+
+    <h2>Orders Count per Year</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Orders Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for year, count in orders_count_per_year.items %}
+                <tr>
+                    <td>{{ year }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Distinct Customers Count</h2>
+    <p>{{ distinct_customers_count }}</p>
+
+    <h2>Top Customers</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Total Sales Amount</th>
+                <th>Number of Transactions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in top_customers.iterrows %}
+            <tr>
+                <td>{{ row.customer_id }}</td>
+                <td>{{ row.customer_name }}</td>
+                <td>{{ row.sum }} </td>
+               <td>{{ row.count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Customer Transactions per Year</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Customer Transactions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for year, transactions in customer_transactions_per_year.items %}
+                <tr>
+                    <td>{{ year }}</td>
+                    <td>{{ transactions }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Top Subcategory Names</h2>
+    <ul>
+        {% for subcategory in top_subcategory_names %}
+            <li>{{ subcategory }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Region Sales Pie Chart</h2>
+    {% comment %} <img src="{{ region_sales_pie_chart|safe }}" alt="Region Sales Pie Chart"> {% endcomment %}
+    <img src="{{ region_sales_pie_chart | safe }}" alt="Region Sales Pie Chart"/>
+
+    <h2>Sales Performance Line Chart</h2>
+    <img src="{{ sales_performance_line_chart|safe}}" alt="Sales Performance Line Chart">
+</body>
+</html>
